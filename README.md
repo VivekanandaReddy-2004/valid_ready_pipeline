@@ -38,5 +38,11 @@ It is commonly used between two hardware modules to safely transfer data while s
 
 ## Transfer Conditions
 ### Input Accept (Write into register)
-A new input word is accepted when:
+A new input word is accepted when: in_valid && in_ready
+
+### Output Consume (Read by downstream)
+The stored output word is consumed when: out_valid && out_ready
+
+
+
 
